@@ -1,0 +1,28 @@
+{
+  "name": "clever-coders/blog-bundle",
+  "description": "Blog capabilities for Symfony projects.",
+  "license": "MIT",
+  "authors": [{
+    "name": "CleverCoders",
+    "homepage": "https://github.com/"
+  },{
+    "name": "Zachary Quintana",
+    "homepage": "https://github.com/zquintana"
+  }],
+  "type": "symfony-bundle",
+  "require": {
+    "php": "~7.1",
+    "symfony/form": "^4.0",
+    "symfony/dependency-injection": "^4.0",
+    "symfony/framework-bundle": "^4.0",
+    "symfony/http-foundation": "^4.0",
+    "symfony/http-kernel": "^4.0",
+    "symfony/routing": "^4.0"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "CleverCoders\\Bundle\\BlogBundle\\": "src"
+    }
+  }
+}
