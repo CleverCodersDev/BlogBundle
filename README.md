@@ -1,0 +1,2 @@
+# BlogBundle
+Symfony blog bundle
