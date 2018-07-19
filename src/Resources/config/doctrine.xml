@@ -5,6 +5,8 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-
+        <service id="cc_blog.listener.inheritance_listener" class="CleverCoders\Bundle\BlogBundle\Listener\InheritanceListener" public="false">
+            <tag name="doctrine.event_listener" event="loadClassMetadata" />
+        </service>
     </services>
 </container>

@@ -24,7 +24,19 @@ class CleverCodersBlogExtension extends Extension
         $config = $processor->processConfiguration($configuration, $configs);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-//        $container->setParameter('clever_coders_blog.inheritance_map', $config[''])
         // load services
+        $this->loadDoctrine($loader, $container, $config);
+    }
+
+    /**
+     * @param XmlFileLoader    $loader
+     * @param ContainerBuilder $container
+     * @param array            $config
+     */
+    private function loadDoctrine(XmlFileLoader $loader, ContainerBuilder $container, array $config): void
+    {
+        $loader->load('doctrine.xml');
+        $inheritanceListener = $container->getDefinition('cc_blog.listener.inheritance_listener');
+        $inheritanceListener->addArgument($config['content_types']);
     }
 }
