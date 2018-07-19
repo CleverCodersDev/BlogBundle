@@ -19,7 +19,9 @@
     "symfony/http-kernel": "^4.0",
     "symfony/routing": "^4.0"
   },
-  "require-dev": {},
+  "require-dev": {
+    "doctrine/doctrine-bundle": "^1.6"
+  },
   "autoload": {
     "psr-4": {
       "CleverCoders\\Bundle\\BlogBundle\\": "src"
