@@ -4,13 +4,10 @@
                   xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <mapped-superclass name="CleverCoders\Bundle\BlogBundle\Entity\Post" inheritance-type="SINGLE_TABLE" table="cc_blog_posts">
+    <entity name="CleverCoders\Bundle\BlogBundle\Entity\Post" inheritance-type="SINGLE_TABLE" table="cc_blog_posts">
         <discriminator-column name="type" type="string" length="50" />
 
-        <id name="id" type="string" column="id" length="100">
-            <generator strategy="CUSTOM"/>
-            <custom-id-generator class="DealerDirect\ShortUUIDBundle\ORM\Id\UUIDGenerator" />
-        </id>
+        <id name="id" type="uuid" column="id" />
 
         <field name="title" />
         <field name="content" type="text" />
@@ -34,5 +31,5 @@
                 <join-column name="featured_image_id"/>
             </join-columns>
         </many-to-one>
-    </mapped-superclass>
+    </entity>
 </doctrine-mapping>

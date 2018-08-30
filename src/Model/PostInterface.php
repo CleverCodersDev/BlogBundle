@@ -3,12 +3,13 @@
 namespace CleverCoders\Bundle\BlogBundle\Model;
 
 use CleverCoders\Bundle\BlogBundle\Model\AssetInterface;
+use Gedmo\Timestampable\Timestampable;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Interface PostInterface
  */
-interface PostInterface
+interface PostInterface extends Timestampable
 {
     /**
      * @return mixed

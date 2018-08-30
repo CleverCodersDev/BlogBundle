@@ -3,6 +3,7 @@
 namespace CleverCoders\Bundle\BlogBundle\Model;
 
 use CleverCoders\Bundle\BlogBundle\Model\AssetInterface;
+use Gedmo\Timestampable\Traits\Timestampable;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -10,6 +11,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 trait PostTrait
 {
+    use Timestampable;
+
     /**
      * @var mixed
      */
