@@ -2,6 +2,7 @@
 
 namespace CleverCoders\Bundle\BlogBundle\Model;
 
+use CleverCoders\Bundle\BlogBundle\Model\AssetInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
