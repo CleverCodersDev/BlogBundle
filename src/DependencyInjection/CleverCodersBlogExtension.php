@@ -32,6 +32,8 @@ class CleverCodersBlogExtension extends Extension
      * @param XmlFileLoader    $loader
      * @param ContainerBuilder $container
      * @param array            $config
+     *
+     * @throws \Exception
      */
     private function loadDoctrine(XmlFileLoader $loader, ContainerBuilder $container, array $config): void
     {

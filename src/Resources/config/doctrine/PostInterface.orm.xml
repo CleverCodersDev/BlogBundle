@@ -4,7 +4,7 @@
                   xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <mapped-superclass name="CleverCoders\Bundle\BlogBundle\Model\Post" inheritance-type="SINGLE_TABLE">
+    <mapped-superclass name="CleverCoders\Bundle\BlogBundle\Model\PostInterface" inheritance-type="SINGLE_TABLE">
         <discriminator-column name="type" type="string" length="50" />
 
         <id name="id" type="string" column="id" length="100">
